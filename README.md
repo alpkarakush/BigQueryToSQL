@@ -2,6 +2,7 @@
 
 All query information is saved in bigquery_config.json files and can be configured there.
 Please procced through all steps for script to work properly:
+0) Set up virtual environment
 1) pip install -r requirements.txt
 2) install MySql server and write host, user, passwords in sql_config.json.
   If your OS is Ubuntu you can use [this](https://support.rackspace.com/how-to/installing-mysql-server-on-ubuntu/).
