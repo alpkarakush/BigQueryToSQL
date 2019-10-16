@@ -1,7 +1,8 @@
 # BigQuery-to-SQL
 
 All query information is saved in bigquery_config.json files and can be configured there.
-Please procced through all steps for script to work properly:
+Please procced through all steps for script to work properly:<br/>
+
 0) Set up virtual environment
 1) pip install -r requirements.txt
 2) install MySql server and write host, user, passwords in sql_config.json.
