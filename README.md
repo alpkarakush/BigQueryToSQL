@@ -23,3 +23,6 @@ big_query_manager.py<br />
 
 
 sql_table_manager.py:  A simple SQL manager suitable for this project's purposes only
+
+TO-DO:<br />
+* insert csv files into sql table
