@@ -14,11 +14,11 @@ Please procced through all steps for script to work properly:
 
 
 big_query_manager.py<br />
-⋅⋅* cast_to_timestamp() used for casting "repository_creeated_at" to timestamp type for later querying purposes<br />
-⋅⋅* export_table_to_storage() used for exporting table to Cloud Storage, if table bigger than 500mb it'll be chunked<br />
-⋅⋅* create_query_table() query a table and save result in a new table<br />
-⋅⋅* download_blob() Download directory from Cloud Storage<br />
-⋅⋅* get_date_range() Query date interval and download results<br />
-⋅⋅* create_sql_from_table() Create a "Create TABLE" script with table schema from "target_table_id"<br />
+* cast_to_timestamp() used for casting "repository_creeated_at" to timestamp type for later querying purposes<br />
+* export_table_to_storage() used for exporting table to Cloud Storage, if table bigger than 500mb it'll be chunked<br />
+* create_query_table() query a table and save result in a new table<br />
+* download_blob() Download directory from Cloud Storage<br />
+* get_date_range() Query date interval and download results<br />
+* create_sql_from_table() Create a "Create TABLE" script with table schema from "target_table_id"<br />
 sql_table_manager.py<br />
    A simple SQL manager suitable for this project's purposes only
