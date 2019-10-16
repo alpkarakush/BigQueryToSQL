@@ -1,0 +1,6 @@
+{
+"host" : "localhost",
+"user" : "test_user",
+"password" : "password123",
+"database" : "github_timeline"
+}

@@ -1,0 +1,15 @@
+{
+"project_id" : "bigquery-public-data",
+"dataset_id" : "samples",
+"table_id" : "github_timeline",
+"target_project_id" : "noted-compass-255314",
+"target_dataset_id" : "github",
+"target_table_id" : "github_timeline",
+"column" : "repository_created_at",
+"target_column" : "repository_created_at_timestamp",
+"bucket_name" : "github_timeline",
+"from_date" : "2009-01-01",
+"to_date" : "2013-12-30",
+"dest_dir" : ".",
+"table_column_data_dest_file" : "column_data.json"
+}

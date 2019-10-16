@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "noted-compass-255314",
+  "private_key_id": "e15db5a526f4fe7152af9db2bb4494008794cd37",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEuwIBADANBgkqhkiG9w0BAQEFAASCBKUwggShAgEAAoIBAQCw9F2FHXxhK26E\nFQ6Jn3Q5IZnTvOGJFbc7l5aeM9t8WSN4yXh/5EUkYTJdc/wR9rpsH904PzpljVjd\ntw+grC3wOXnrG89CX1PYiTErYIXmpwPmak3eQrQfTH7uz3nn6tNE/khyRhcj71ul\nW9sfBz0cnDdTpUZd1386ji/cRfH+gqDoqGNS25leqUMR+m3qEejLY8oZzxzWR3DB\natu+Z+MyVBpNOMhJjxNxlXCl5Xi/Xl3KRBEcnVgL5Nk7++nfi7+dtNHMS0XEcizW\nIl4jfwD0YlpjBMIPljucvezmDk1+2GVGGdPf4fMBD6/R5CpFsK6UB+gR2KTQKqGR\nEMlS4LcrAgMBAAECgf846QkqxqY572ibvNSaw62dXNvG5/hLyQV6ekZL8GGmnFnM\nKapCIigaiyf85lCAy9ko7RaOAHJyNq4IoIIQ1U9GSItCvK7rqbz4PHyTzCHvDHKJ\n/aZi1REY/9Z9ojySr0iYkoS6O9CKvhsQviS61e58RRbbeqF8N30JArG3Jh0DZ8vO\n4Tw9vKBD5AkAzMPs7GUy4vdLQ1MQlIpVIZ8yjEP/sEihf+8GWhnMtBtC+sUuegFl\nXjSWm6Vg54dNh53OtRA6V96FHDLDoIVCN1ls35EN3ZOn8soUKmht8mU8lF4YGzGa\ns6c15nd3CP9PQJDH+btA077ptmSOAjruP8fMhkkCgYEA42R2Q99n1BApeomlU7Qk\nztkFTyRvwnUir2pnYRAQ+X45xC2svd0v0BJM3YGuVkP+EfqOi8i2OpSVcrC9NjRC\nk/c5GjleVjD8OtRF1amzUS8+R8/XPuyRRazGBzd7Jg6DmtnI8IqVPBanKv1wWCRs\nCjIqGDdHYvfvt+GbCrXoCccCgYEAxzd4dywGUkF90B4XotaBWdNvlmF8he1b4LRG\n/UlG9oOIW1k5cXj1J/QaOh26qcEWIK1hxbkEcXWZRs5uoQBNt8VZNnHS3U+ZVdxU\n8Tv0IgDyb0TZNlsgd7blySCpHQ1u18KqQevvZwLCSbexW99ToZkiOE5CkuR0lewn\n36E0h30CgYEA1mbl/88IlfH7OhfIs6iaQBJuKBYh7kcFwkHgYauFZcj3bJroUkjY\niSaIJR7eI2aOi6MkfnZsI8XvN6mfbhlOYTdsNua6pSgg2tNFWVVdxwF1hr5YpHLn\n8rsaKLnOOq7atcn85Zi1Z2ewjR9TqzgESoTMHfMZMx61fzqQNkQYGgcCgYAZIfpk\nrn0tq21/8AvzUzSGbJJLWoknLEbHFndORQxa1UVCoQMKOcRUAgu9ATsnZ2CvRrBr\nDWhuF/P6Zti2Hx+u64rRv5JmsUAbAO0GchXepFfxibINlXmHIN/ke+ZZ7/Pn7Hsm\nTemqCUMRoccSXB5k6LjUeasUdRXwRBbTs7a40QKBgBE27d1Afib6pwSOB01jtjK1\nYUGsEMmaoRwhFyj5LkfL3tsot/BzDpQOMip4AILtRB97DHRFo46T63qTXepQCKXH\nepbqp5ba/LORKuAdGQp4PVERJZ0pzyE6Zclo0o9kdGLwvkAhUOjDtGiyM2+WqlbI\nLFyM4p5AUFEPgjxFmVYB\n-----END PRIVATE KEY-----\n",
+  "client_email": "bigquery-service-account@noted-compass-255314.iam.gserviceaccount.com",
+  "client_id": "105189729725425201041",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/bigquery-service-account%40noted-compass-255314.iam.gserviceaccount.com"
+}
