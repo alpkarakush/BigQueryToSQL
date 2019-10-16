@@ -9,7 +9,6 @@
 "target_column" : "repository_created_at_timestamp",
 "bucket_name" : "github_timeline",
 "from_date" : "2009-01-01",
-"to_date" : "2013-12-30",
-"dest_dir" : ".",
-"table_column_data_dest_file" : "column_data.json"
+"to_date" : "2009-12-30",
+"sql_create_script" : "sql_create_script.txt"
 }

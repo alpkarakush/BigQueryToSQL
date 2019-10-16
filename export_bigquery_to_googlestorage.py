@@ -11,7 +11,7 @@ if __name__ == "__main__":
     with open("./bigquery_config.json") as json_file:
             config = json.load(json_file)
 
-    key_path = os.path.abspath("noted-compass-255314-e15db5a526f4.json") 
+    key_path = os.path.abspath("./google_api_credentials.json") 
     credentials = service_account.Credentials.from_service_account_file(key_path,
                                                                         scopes=["https://www.googleapis.com/auth/cloud-platform"])
     client = bigquery.Client(credentials=credentials,
@@ -29,24 +29,24 @@ if __name__ == "__main__":
                       column=           config["column"],
                       target_column=    config["target_column"])
 
-    #Sends query qith given date interval and returns result in a new table_ref
-    table_ref = get_date_range(client=      client,
-                               key_path= key_path,
-                               project_id=  config["target_project_id"],
-                               dataset_id=  config["target_dataset_id"],
-                               table_id=    config["target_table_id"],
-                               bucket_name= config["bucket_name"],
-                               from_date=   config["from_date"],
-                               to_date=     config["to_date"])
+    #Sends query qith given date interval and downloads all files from cloud storage
+    get_date_range(client=      client,
+                   key_path=    key_path,
+                   project_id=  config["target_project_id"],
+                   dataset_id=  config["target_dataset_id"],
+                   table_id=    config["target_table_id"],
+                   bucket_name= config["bucket_name"],
+                   from_date=   config["from_date"],
+                   to_date=     config["to_date"])
 
+    #If you want to quickly check this function u can comment above two functions and run script again
     create_table_str = create_sql_from_table(client=       client,
                                               dataset_id=   config["target_dataset_id"],
-                                              table_ref=    table_ref,
-                                              dest_dir=     ".",
-                                              dest_file=    config["table_column_data_dest_file"])
+                                              table_id=    config["table_id"],
+                                              dest_file=    config["sql_create_script"])
 
     sqlManager = SqlManager(config_path='./sql_config.json')
-    sqlManager.create_database(db_name=table_ref.table_id)
+    sqlManager.create_database(db_name=config["target_table_id"])
     sqlManager.create_table(create_query=create_table_str)
     #To-do
     # sqlManager.insert_csv_rows(data_dir="./github_timeline_test_2009_01_01_2010_12_30", 

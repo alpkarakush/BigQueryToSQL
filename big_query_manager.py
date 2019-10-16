@@ -159,11 +159,13 @@ def get_date_range( client,
         create_query_table(client= client,
                             sql_query= QUERY,
                             table_ref= table_ref)
-        
+    
+    #Export table to Cloud Storage (If table is bigger than 500mb it'll be chunked to 500mb files)
     export_table_to_storage(   client= client,
                     destination_uri= destination_uri,
                     table_ref= table_ref)
 
+    #Donload all files from Cloud Storage
     download_blob(  bucket_name= bucket_name,
                     prefix= date_range_str+'/',
                     destination_dir= date_range_str,
@@ -171,7 +173,7 @@ def get_date_range( client,
 
     return table_ref
 
-def create_sql_from_table(client, dataset_id, table_ref, dest_dir, dest_file):
+def create_sql_from_table(client, dataset_id, table_id, dest_file):
     '''Queries BigQuery selecting (column_name, datatype), then builds "Create TABLE" script with table schema
         Used for creating table in MySql DB, from BigQuery schema
     '''
@@ -180,7 +182,7 @@ def create_sql_from_table(client, dataset_id, table_ref, dest_dir, dest_file):
                     'INTEGER':'INT',
                     'TIMESTAMP':'TIMESTAMP'}
 
-    client = bigquery.Client()
+    table_ref = client.dataset(dataset_id).table(table_id)
     table = client.get_table(table_ref)
 
     column_dict = {}
@@ -190,14 +192,8 @@ def create_sql_from_table(client, dataset_id, table_ref, dest_dir, dest_file):
         column_dict[field.name] = field.field_type
     create_table_query += ');'
 
-    if not os.path.isdir(os.path.abspath(dest_dir)):
-        try:
-            os.mkdir(os.path.abspath(dest_dir))
-        except OSError as error: 
-            print(error)
-
-    with open(os.path.abspath(dest_dir+'/'+dest_file),"w+") as file:
+    with open(dest_file,"w+") as file:
         # file.write(create_table_query)
-        json.dump(json.dumps(column_dict), file)
+        file.write(create_table_query)
 
     return create_table_query
