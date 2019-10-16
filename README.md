@@ -20,5 +20,6 @@ big_query_manager.py<br />
 * download_blob() Download directory from Cloud Storage<br />
 * get_date_range() Query date interval and download results<br />
 * create_sql_from_table() Create a "Create TABLE" script with table schema from "target_table_id"<br />
-sql_table_manager.py<br />
-   A simple SQL manager suitable for this project's purposes only
+
+
+sql_table_manager.py:  A simple SQL manager suitable for this project's purposes only
