@@ -2,7 +2,6 @@ from google.cloud import bigquery
 from google.cloud import storage
 from datetime import datetime, timedelta
 from google.api_core import exceptions
-import uuid
 import os
 import json
 
